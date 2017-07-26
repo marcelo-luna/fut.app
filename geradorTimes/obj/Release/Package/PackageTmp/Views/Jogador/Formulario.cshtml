@@ -1,0 +1,50 @@
+﻿<form action="/Jogador/Adiciona" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="nome" class="col-sm-2 control-label">Nome</label>
+        <div class="col-sm-5">
+            <input id="nome" name="jogador.Nome" value="@ViewBag.Jogador.Nome" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="posicao" class="col-sm-2 control-label">Posição</label>
+        <div class="col-sm-5">
+            <select id="posicao" name="jogador.Posicao" value="@ViewBag.Jogador.Posicao" class="form-control">
+                <option value="1">Defesa</option>
+                <option value="2">Ataque</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="nivel" class="col-sm-2 control-label">Habilidade</label>
+        <div class="col-sm-5">
+            <select id="nivel" name="jogador.Nivel" value="@ViewBag.Jogador.Nivel" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="ativo" class="col-sm-2 control-label">Ativo</label>
+        <div class="col-sm-5">
+            <select id="ativo" name="jogador.Ativo" value="@ViewBag.Jogador.Ativo" class="form-control">
+                <option value="True">Sim</option>
+                <option value="False">Não</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="text-align:center">
+        <input type="submit" />
+    </div>
+</form>

@@ -1,0 +1,30 @@
+﻿@model IList<geradorTimes.Models.Jogador>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Posição</th>
+            <th>Habilidade</th>
+            <th>Ativo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var jogador in Model)
+        {
+            <tr>
+                <td>@jogador.Nome</td>
+                <td>@if (jogador.Posicao.Equals(1))
+                {<p>Defesa</p> }
+                else
+                {<p>Ataque</p>}</td>
+                <td>@jogador.Nivel</td>
+                <td>@if (jogador.Ativo)
+                { <p>Sim</p>}
+                else
+                { <p>Não</p>}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Novo Jogador", "Formulario", null, new {@class = "btn btn-default" })
+
